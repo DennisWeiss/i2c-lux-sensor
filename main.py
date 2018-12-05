@@ -1,5 +1,6 @@
 from tsl2561 import TSL2561
 import matplotlib.pyplot as plt
+import time
 
 
 tsl = TSL2561(debug=True)
@@ -15,6 +16,7 @@ def do_measurements(n, time_interval):
         data.append(tsl.lux())
         plt.plot(data)
         plt.show()
+        time.sleep(1)
         
     
 
