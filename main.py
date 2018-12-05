@@ -4,7 +4,7 @@ import time
 
 
 tsl = TSL2561(debug=True)
-n = 100
+n = 50
 time_interval = 0.1
 
 
@@ -13,7 +13,7 @@ def do_measurements(n, time_interval):
     plt.ylabel('Lux')
     plt.xlabel('time in s')
     for i in range(n):
-        data.append(tsl.lux())
+        data.append((i * time_interval, tsl.lux()))
         time.sleep(time_interval)
     plt.plot(data)
     plt.show()
