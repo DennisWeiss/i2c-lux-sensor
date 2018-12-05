@@ -18,6 +18,9 @@ def do_measurements(n, time_interval):
         plt.show()
         time.sleep(1)
         
+
+do_measurements(n, time_interval)
+        
     
 
 
