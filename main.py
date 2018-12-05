@@ -13,9 +13,9 @@ def do_measurements(n, time_interval):
     plt.ylabel('Lux')
     plt.xlabel('time in s')
     for i in range(n):
-        data.append((i * time_interval, tsl.lux()))
+        data.append(tsl.lux())
         time.sleep(time_interval)
-    plt.plot(data)
+    plt.plot(list(map(lambda n: n * time_interval, range(n))), data)
     plt.show()
         
 
